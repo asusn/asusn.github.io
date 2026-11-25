@@ -1,0 +1,51 @@
+# 构建和部署 Jekyll 网站到 GitHub Pages 的示例工作流
+名称：部署 Jekyll 并预装 GitHub Pages 依赖项: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+在：:
+  # 在针对默认分支的推送上运行# Runs on pushes targeting the default branch
+  推送：:
+    分支：["main"]: ["main"]
+
+  # 允许您从 Actions 标签页手动运行此工作流# Allows you to run this workflow manually from the Actions tab
+  工作流_调度:
+
+# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
+权限：:
+  内容：阅读: read
+  页面：写入: write
+  id-token: 写入: write
+
+# 只允许一次并发部署，跳过在正在运行的部署和最新排队部署之间的排队运行。
+# 但是，请勿取消正在进行的运行，因为我们希望这些生产部署能够完成。
+并发：:
+  组: "pages": "pages"
+  取消进行中：否: false
+
+职位：:
+  # 构建任务# Build job
+  构建：:
+    运行环境：ubuntu-latest: ubuntu-latest
+    步骤：:
+      - 名称：结账name: Checkout
+        使用：actions/checkout@v4: actions/checkout@v4
+      - 名称：设置页面name: Setup Pages
+        使用：actions/configure-pages@v5: actions/configure-pages@v5
+      - 名称：使用 Jekyll 构建name: Build with Jekyll
+        使用：actions/jekyll-build-pages@v1: actions/jekyll-build-pages@v1
+        使用：:
+          源自：./: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
