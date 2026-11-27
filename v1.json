@@ -1,0 +1,555 @@
+{
+  "schema": 1,
+  "updated_at": "2026-11-27T12:38:10.396Z",
+  "plugins": [
+    {
+      "name": "自定义后台路径",
+      "short": "admin-path",
+      "category": "security",
+      "description": "自定义 Komari 后台页面路径，并关闭原 /admin 入口。",
+      "version": "1.0.0",
+      "author": "Kristen",
+      "komari": "",
+      "url": "https://github.com/Grandova/Backend-Customize-path-For-Komari",
+      "download": "https://github.com/Grandova/Backend-Customize-path-For-Komari/releases/download/v1.0.0/komari-plugin-admin-path-v1.0.0.zip",
+      "sha256": "a1a825f1e588f2458f6a8e7983d8fb3680ad1e9ee0917e6e1128533c7c0526e1"
+    },
+    {
+      "name": {
+        "zh_CN": "开放 API",
+        "en": "Open API"
+      },
+      "short": "api",
+      "category": "integration",
+      "description": {
+        "zh_CN": "把控制台里的节点状态变成规范的 REST API：节点列表、实时状态、历史负载、Ping 记录一站查全，供机器人插件、脚本与自建面板调用。",
+        "en": "Expose console-visible server metrics as a clean REST API for bots, scripts and custom dashboards."
+      },
+      "version": "1.0.3",
+      "author": "MimoKit",
+      "komari": ">=1.4.0",
+      "url": "https://github.com/MimoKit/komari-api",
+      "download": "https://github.com/MimoKit/komari-api/releases/download/v1.0.3/komari-plugin-api.zip",
+      "sha256": "99147d93bff3f5123a5cb86539a023a41332c770da529d23c57bd0683eaba125"
+    },
+    {
+      "name": {
+        "zh-CN": "节点在线率历史",
+        "zh_CN": "节点在线率历史",
+        "en": "Availability History"
+      },
+      "short": "availability-history",
+      "category": "monitoring",
+      "description": {
+        "zh-CN": "基于 WebSocket 实时断连事件记录节点真实在线率历史与 30 天可用性。插件可独立采集数据与提供 API；强烈推荐搭配 Komari Emerald Insights（翡翠洞察）主题，以在前端直观展示真正的 30 天在线率与可用性分析条带。",
+        "zh_CN": "基于 WebSocket 实时断连事件记录节点真实在线率历史与 30 天可用性。插件可独立采集数据与提供 API；强烈推荐搭配 Komari Emerald Insights（翡翠洞察）主题，以在前端直观展示真正的 30 天在线率与可用性分析条带。",
+        "en": "Exact WebSocket connection event ledger and 30-day availability history for Komari. Operates standalone for data collection and APIs; strongly recommended to pair with Komari Emerald Insights theme to display true 30-day availability in the UI."
+      },
+      "version": "0.1.6",
+      "author": "Chen017",
+      "komari": ">=1.5.0",
+      "url": "https://github.com/Chen017/komari-plugin-availability-history",
+      "download": "https://github.com/Chen017/komari-plugin-availability-history/releases/download/v0.1.6/availability-history.zip",
+      "sha256": "7c333a361305ea61275127e0e7498eab533eae6e3ffde9b32dc77408d19d4ebf"
+    },
+    {
+      "name": {
+        "zh_CN": "Bark 通知（增强版）",
+        "en": "Bark Plus Notification"
+      },
+      "short": "bark-plus",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 Bark 发送 Komari 通知，支持自建服务器 Basic Auth、多设备、分组与重要警告",
+        "en": "Send Komari notifications through Bark with Basic Auth for self-hosted servers, multiple devices, groups and critical alerts"
+      },
+      "version": "1.1.0",
+      "author": "hoobnn",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/hoobnn/komari-plugins",
+      "download": "https://github.com/hoobnn/komari-plugins/releases/download/bark-plus-v1.1.0/bark-plus.zip",
+      "sha256": "591e263f801afe553847aab2a28a46058055f2f76a6f63ddcbf7b1fd72fa7d38"
+    },
+    {
+      "name": {
+        "zh_CN": "Komari DDNS",
+        "en": "Komari DDNS"
+      },
+      "short": "cf-ddns",
+      "category": "network",
+      "description": {
+        "zh_CN": "根据 Komari 节点上报的公网 IP，自动更新 Cloudflare DNS 解析记录，实现动态域名解析。",
+        "en": "Automatically update Cloudflare DNS records from the public IP reported by a Komari node, providing dynamic DNS."
+      },
+      "version": "0.3.0",
+      "author": "穿云箭",
+      "komari": ">=1.4.0",
+      "url": "https://github.com/yunjianj/Komari-DDNS",
+      "download": "https://github.com/yunjianj/Komari-DDNS/releases/download/v0.3.0/komari-ddns-0.3.0.zip",
+      "sha256": "2fcd38b71bcccaec19a4ed4d7bb281835ee8adaf043813a4852db18b017383d1"
+    },
+    {
+      "name": "Cloudflare DDNS",
+      "short": "cloudflare-ddns",
+      "category": "network",
+      "description": "使用 Cloudflare 邮箱和 Global API Key，将 Komari 服务器 IP 定时同步到多个域名。",
+      "version": "1.0.1",
+      "author": "Kristen",
+      "komari": "",
+      "url": "https://github.com/Grandova/Cloudflare-DDNS-For-Komari",
+      "download": "https://github.com/Grandova/Cloudflare-DDNS-For-Komari/releases/download/v1.0.1/cloudflare-ddns-1.0.1.zip",
+      "sha256": "7ecba07a0d8dda6d30785e02aa1fe573126dd4c089cd3021ccb1a8845fa3844b"
+    },
+    {
+      "name": "Cloudflare Tunnel",
+      "short": "cloudflare-tunnel",
+      "category": "network",
+      "description": {
+        "zh-CN": "在 Komari 中下载、更新并管理 Cloudflare Tunnel。",
+        "en": "Download, update, and manage Cloudflare Tunnel from Komari."
+      },
+      "version": "1.1.0",
+      "author": "Akizon77",
+      "komari": ">=1.4.0",
+      "url": "https://github.com/Akizon77/cloudflare-tunnel",
+      "download": "https://github.com/Akizon77/cloudflare-tunnel/releases/download/v1.1.0/cloudflare-tunnel-1.1.0.zip",
+      "sha256": "2068ad4ca1cd3665d08599363635cf444ac912a389c65d4faa8262dbe37bf30d"
+    },
+    {
+      "name": {
+        "zh-CN": "CPU Steal 监控",
+        "en": "CPU Steal Monitor",
+        "zh_CN": "CPU Steal 监控"
+      },
+      "short": "cpu-steal-monitor",
+      "description": {
+        "zh-CN": "每两分钟通过现有 Linux Agent 只读采集 CPU Steal（宿主机 CPU 抢占率），独立保存 90 天历史并提供历史、汇总及诊断 REST API，无需安装额外 VPS 采集程序，也不依赖前端主题。强烈推荐搭配 Komari Emerald Insights（翡翠洞察）主题，可在节点详情原有 CPU／系统负载图中直观查看 Steal（两分钟均值）曲线与历史变化。",
+        "zh_CN": "每两分钟通过现有 Linux Agent 只读采集 CPU Steal（宿主机 CPU 抢占率），独立保存 90 天历史并提供历史、汇总及诊断 REST API，无需安装额外 VPS 采集程序，也不依赖前端主题。强烈推荐搭配 Komari Emerald Insights（翡翠洞察）主题，可在节点详情原有 CPU／系统负载图中直观查看 Steal（两分钟均值）曲线与历史变化。",
+        "en": "Samples Linux CPU Steal (hypervisor contention) every two minutes using the existing Agent, persists up to 90 days of history, and provides standalone history, summary and diagnostics REST APIs without a separate VPS collector or theme dependency. Strongly recommended with the Komari Emerald Insights theme, which overlays the two-minute Steal history on the existing CPU and system-load chart."
+      },
+      "version": "0.2.3",
+      "author": "Chen017",
+      "komari": ">=1.4.3",
+      "url": "https://github.com/Chen017/komari-plugin-cpu-steal-monitor",
+      "download": "https://github.com/Chen017/komari-plugin-cpu-steal-monitor/releases/download/v0.2.3/cpu-steal-monitor.zip",
+      "sha256": "efc52ba54e6c94564f05d529511dc19bd8d8c7af0ff11783a15285db85773e1e",
+      "category": "monitoring"
+    },
+    {
+      "name": "Domain Watch",
+      "short": "domain-watch",
+      "category": "network",
+      "description": "域名监控插件：基于 RDAP 协议的 Whois 查询与域名续费到期提醒。",
+      "version": "1.0.2",
+      "author": "Geekertao",
+      "komari": ">=1.0.0",
+      "url": "https://github.com/Geekertao/komari-plugin-domain-watch",
+      "download": "https://github.com/Geekertao/komari-plugin-domain-watch/releases/download/v1.0.2/domain-watch-1.0.2.zip",
+      "sha256": "e0e34b976c912335bd5bdf1ed295c9d32eb49e19762ebc866020d893979e5284"
+    },
+    {
+      "name": {
+        "zh_CN": "Email 通知",
+        "zh_TW": "Email 通知",
+        "en": "Email Notification",
+        "ja_JP": "メール通知",
+        "id_ID": "Notifikasi Email"
+      },
+      "short": "email-notification-plugin",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 SMTP 发送 Komari 通知",
+        "zh_TW": "透過 SMTP 傳送 Komari 通知",
+        "en": "Send Komari notifications through SMTP",
+        "ja_JP": "SMTP で Komari 通知を送信します",
+        "id_ID": "Kirim notifikasi Komari melalui SMTP"
+      },
+      "version": "1.0.0",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-notification-plugins",
+      "download": "https://github.com/Akizon77/komari-notification-plugins/releases/download/v1.0.0/email-notification-plugin.zip",
+      "sha256": "3ede48d5f5f1e43de7dc6fdb2685191c3e66bdb383355a2c45d6cfcf95a477a0"
+    },
+    {
+      "name": "1.5.x 后台 404 修复",
+      "short": "fix-1-5-0-theme-404",
+      "category": "utility",
+      "description": "修复1.5.0使用第三方主题进入后台404",
+      "version": "1.0.0",
+      "author": "Akizon77",
+      "url": "https://ss.akz.moe",
+      "download": "https://b2.akz.moe/awesome-pictures/komari-screenshot/fix-1-5-0-theme-404.zip",
+      "sha256": "e5794c56c1a47922afdf6b81b5930b6097c56e648a816ff6aa741615650d3abb",
+      "komari": ""
+    },
+    {
+      "name": {
+        "zh_CN": "GitHub 代理加速",
+        "en": "GitHub Proxy"
+      },
+      "short": "github-proxy",
+      "category": "utility",
+      "description": {
+        "zh_CN": "为插件市场和主题市场的 GitHub 下载链接添加代理前缀，加速下载",
+        "en": "Add proxy prefix to GitHub download URLs in plugin/theme market"
+      },
+      "version": "1.3.3",
+      "author": "komari",
+      "komari": ">=1.0.0",
+      "url": "https://github.com/ting1e/komari-github-proxy",
+      "download": "https://github.com/ting1e/komari-github-proxy/releases/download/v1.3.3/komari-github-proxy-v1.3.3.zip",
+      "sha256": "696736900d8c568d8df94340c7755422bc05a627b39fb196745b70862e3b70f5"
+    },
+    {
+      "name": {
+        "zh_CN": "Gotify 通知",
+        "zh_TW": "Gotify 通知",
+        "en": "Gotify Notification",
+        "ja_JP": "Gotify 通知",
+        "id_ID": "Notifikasi Gotify"
+      },
+      "short": "gotify-notification-plugin",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 Gotify 推送 Komari 通知",
+        "zh_TW": "透過 Gotify 推送 Komari 通知",
+        "en": "Send Komari notifications through Gotify",
+        "ja_JP": "Gotify で Komari 通知を送信します",
+        "id_ID": "Kirim notifikasi Komari melalui Gotify"
+      },
+      "version": "1.0.6",
+      "author": {
+        "zh_CN": "AXmishell",
+        "zh_TW": "AXmishell",
+        "en": "AXmishell",
+        "ja_JP": "AXmishell",
+        "id_ID": "AXmishell"
+      },
+      "komari": ">=1.6.0",
+      "url": "https://github.com/AXmishell/komari-plugin-gotify",
+      "download": "https://github.com/AXmishell/komari-plugin-gotify/releases/download/v1.0.6/gotify-notification-plugin.zip",
+      "sha256": "8d596c35101de118dd2295ed763dffa16cc31ab16738db163b67b4e651787b7f"
+    },
+    {
+      "name": {
+        "zh-CN": "IPQA 告警报告",
+        "zh_CN": "IPQA 告警报告",
+        "en": "IPQA Alert Report"
+      },
+      "short": "ipqa-alert-report",
+      "category": "monitoring",
+      "description": {
+        "zh-CN": "对于安装了开源项目 IP-Quality-Archive 的 VPS，通过 Komari 通知渠道发送 IP 质量的告警通知。",
+        "zh_CN": "对于安装了开源项目 IP-Quality-Archive 的 VPS，通过 Komari 通知渠道发送 IP 质量的告警通知。",
+        "en": "Sends IP quality alert notifications via Komari notification channels for VPS nodes with the open-source project IP-Quality-Archive installed."
+      },
+      "version": "0.2.6",
+      "author": "Chen017",
+      "komari": ">=1.4.3",
+      "url": "https://github.com/Chen017/komari-plugin-ipqa-alert-report",
+      "download": "https://github.com/Chen017/komari-plugin-ipqa-alert-report/releases/download/v0.2.6/ipqa-alert-report.zip",
+      "sha256": "ec0e652ec59d6f7a9590b6bbf3dbb256ffd62b6b4566c5a59dfbfb332be3015b"
+    },
+    {
+      "name": {
+        "zh_CN": "Komari 日报与周报",
+        "en": "Komari Daily & Weekly Reports"
+      },
+      "short": "komari-daily-weekly-reports",
+      "description": "Komari 监控日报与周报：汇总节点流量、Ping、在线率及可选事件，支持定时发送、实时日报、预览、历史补发和备份，复用 Telegram 通知渠道。",
+      "version": "0.1.0",
+      "author": "zhfk",
+      "komari": ">=1.6.1",
+      "url": "https://github.com/zhfk/komari-usage-report-plugins",
+      "download": "https://github.com/zhfk/komari-usage-report-plugins/releases/download/v0.1.0/komari-daily-weekly-reports-0.1.0.zip",
+      "sha256": "c94d48d47fbf3e4ef3f3e1b6376ac2901e69f3961b6baef0bf524db4b425c826",
+      "category": "monitoring"
+    },
+    {
+      "name": {
+        "zh_CN": "被墙检测",
+        "en": "Block Detection"
+      },
+      "short": "komari-gfw",
+      "description": {
+        "zh_CN": "基于多目标 TCP 探测检测服务器疑似被墙状态，支持双向严格模式、恢复通知、IP 脱敏和管理总览。",
+        "en": "Detect suspected server blocking with multi-target TCP probes, bidirectional strict mode, recovery notifications, IP masking, and an admin overview."
+      },
+      "version": "0.1.9",
+      "author": "Connor",
+      "komari": ">=1.6.1",
+      "url": "https://github.com/Connor3773/Komari_GFW",
+      "download": "https://github.com/Connor3773/Komari_GFW/releases/download/v0.1.9/komari-gfw-0.1.9.zip",
+      "sha256": "51f9724a35de0ec23a8b905c68c2b5b687696ff7a2e0472c776c1e200531f798",
+      "category": "monitoring"
+    },
+    {
+      "name": {
+        "zh_CN": "一次性验证码登录",
+        "en": "One-time Code Login"
+      },
+      "short": "komari-otp-login",
+      "category": "security",
+      "description": {
+        "zh_CN": "通过 Komari 已配置的通知渠道发送一次性验证码登录。支持自定义验证码有效期、总速率与单 IP 速率限制。",
+        "en": "Sign in with a one-time code sent through a configured Komari notification channel, with configurable code lifetime, global rate limits, and per-IP rate limits."
+      },
+      "version": "1.1.0",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-otp-login",
+      "download": "https://github.com/Akizon77/komari-otp-login/releases/download/v1.1.0/komari-otp-login-1.1.0.zip",
+      "sha256": "d7af2284bd8844acf8aaf156ff44adc02eeb1251cc4ad8a9bee88774ea83db41"
+    },
+    {
+      "name": {
+        "zh-CN": "通行密钥",
+        "en": "Passkey"
+      },
+      "short": "komari-passkey",
+      "category": "security",
+      "description": {
+        "zh-CN": "为 Komari 提供通行密钥登录。安装后请前往账户页面添加并启用通行密钥。需要 Komari >=1.4.3。",
+        "en": "Passkey sign-in for Komari. After installation, open the Account page to add and enable a Passkey. Requires Komari >=1.4.3."
+      },
+      "version": "0.1.14",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-passkey",
+      "download": "https://github.com/Akizon77/komari-passkey/releases/download/v0.1.14/komari-passkey-0.1.14.zip",
+      "sha256": "568026a59b7a7adb12617ecbe9ba979123a8ddf5730e71860745d9097cc68bd0"
+    },
+    {
+      "name": {
+        "zh-CN": "共享流量池",
+        "en": "Shared Traffic Pool"
+      },
+      "short": "komari-traffic-pool",
+      "description": {
+        "zh-CN": "按组聚合节点出站/入站流量，对比预置额度，阶梯告警（如 Oracle 多机共享 10TB 月额度）",
+        "en": "Aggregate node traffic per group against a preset quota with stepped alerts (e.g. Oracle shared 10TB/mo)"
+      },
+      "version": "1.0.0",
+      "author": "overspread",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/overspread/komari-traffic-pool",
+      "download": "https://github.com/overspread/komari-traffic-pool/releases/download/v1.0.0/komari-traffic-pool.zip",
+      "sha256": "7db46fe2637819b583b8fc8f876502dc823f398711363eb31e37c978f3a99077",
+      "category": "monitoring"
+    },
+    {
+      "name": {
+        "zh-CN": "负载通知",
+        "en": "Load Notifications"
+      },
+      "short": "load-notification",
+      "category": "monitoring",
+      "description": {
+        "zh-CN": "基于 queryMetrics 的可编排指标告警插件",
+        "en": "Composable metric alerts powered by queryMetrics"
+      },
+      "version": "0.2.1",
+      "author": "Akizon77",
+      "komari": ">=1.4.3",
+      "url": "https://github.com/Akizon77/komari-load-notification-plugin",
+      "download": "https://github.com/Akizon77/komari-load-notification-plugin/releases/download/v0.2.1/load-notification-0.2.1.zip",
+      "sha256": "746f067ba266b0dbf08c2b1090e3215466a2ec87d63d2558f86692de82b7be69"
+    },
+    {
+      "name": {
+        "zh-CN": "MJPEG 实时状态",
+        "en": "MJPEG Live Status"
+      },
+      "short": "mjpeg",
+      "category": "integration",
+      "description": {
+        "zh-CN": "将 Komari 节点状态渲染为实时 MJPEG 表格流。",
+        "en": "Renders Komari node status as a live MJPEG table stream."
+      },
+      "version": "1.1.0",
+      "author": "Komari Monitor",
+      "komari": "",
+      "url": "https://github.com/Akizon77/mjpeg-plugin",
+      "download": "https://github.com/Akizon77/mjpeg-plugin/releases/download/v1.1.0/mjpeg-plugin.zip",
+      "sha256": "94b6cb3952da82ed91dfec4781332c57bb19d3937b936a725a483aa17a4180d1"
+    },
+    {
+      "name": {
+        "zh_CN": "网络流量预测",
+        "en": "NetForecast"
+      },
+      "short": "net-forecast",
+      "category": "monitoring",
+      "description": {
+        "zh_CN": "全节点30天进出站流量增量堆叠柱状图与计费规则自适应累计折线图，直连核心数据库，预测重置日流量并提供超限告警",
+        "en": "All-nodes 30-day stacked bar and billing-adaptive cumulative charts, directly synced with core database, forecasting reset day usage and exhaustion alerts"
+      },
+      "version": "26.1109.1",
+      "author": "livingfree2023",
+      "url": "https://github.com/livingfree2023/Komari-Plugin-NetForecast",
+      "download": "https://github.com/livingfree2023/Komari-Plugin-NetForecast/releases/download/v26.1109.1/net-forecast.zip",
+      "sha256": "fbae9b521ec68a9100168dd48f3c183af913f3d985124c62df5f34f90f7ea4f6"
+    },
+    {
+      "name": {
+        "zh_CN": "Komari KNS 节点与订阅",
+        "en": "Komari KNS Nodes and Subscriptions"
+      },
+      "short": "onebox-bridge",
+      "description": {
+        "zh_CN": "以机器为中心管理 OneBox 代理节点，通过三步向导安装协议，并发布受令牌保护的 Mihomo、sing-box 与多客户端订阅。",
+        "en": "Manage OneBox proxy nodes by machine, install protocols with a three-step wizard, and publish token-protected Mihomo, sing-box, and converted subscriptions."
+      },
+      "version": "1.3.5",
+      "author": "ajax",
+      "komari": ">=1.4.3",
+      "url": "https://github.com/liuarui/komari-plugin-kns",
+      "download": "https://github.com/liuarui/komari-plugin-kns/releases/download/v1.3.5/onebox-bridge.zip",
+      "sha256": "e54ae194b08a963d533507496a1cac67866b380f2ad298f6424c3143a73bd27c",
+      "category": "network"
+    },
+    {
+      "name": {
+        "zh_CN": "地区识别手动修正",
+        "en": "Manual Server Location Override"
+      },
+      "short": "override-location",
+      "category": "utility",
+      "description": "可选择按节点名称或 UUID 覆盖地区代码，处理 HTTP API 与实时 RPC/WebSocket 数据。",
+      "version": "1.1.5",
+      "author": "祁同伟",
+      "komari": "",
+      "url": "https://github.com/TomChian/Komari-Location-Override",
+      "download": "https://github.com/TomChian/Komari-Location-Override/releases/download/1.1.5/komari-override-location-v1.1.5.zip",
+      "sha256": "fa893d862d486b7eeef1b15bc7d2034e4c53c8b6df1b44e8e32480ac095b0660"
+    },
+    {
+      "name": {
+        "zh_CN": "Server酱³ 通知",
+        "zh_TW": "Server醬³ 通知",
+        "en": "ServerChan3 Notification",
+        "ja_JP": "Server酱³ 通知",
+        "id_ID": "Notifikasi ServerChan3"
+      },
+      "short": "serverchan3-notification-plugin",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 Server酱³ 发送 Komari 通知",
+        "zh_TW": "透過 Server醬³ 傳送 Komari 通知",
+        "en": "Send Komari notifications through ServerChan3",
+        "ja_JP": "Server酱³ で Komari 通知を送信します",
+        "id_ID": "Kirim notifikasi Komari melalui ServerChan3"
+      },
+      "version": "1.0.0",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-notification-plugins",
+      "download": "https://github.com/Akizon77/komari-notification-plugins/releases/download/v1.0.0/serverchan3-notification-plugin.zip",
+      "sha256": "c638d3c16043c92dcffd73096ccfd82e1e09dd80ebc1fb938a331b993df59606"
+    },
+    {
+      "name": {
+        "zh_CN": "Server酱 Turbo 通知",
+        "zh_TW": "Server醬 Turbo 通知",
+        "en": "ServerChan Turbo Notification",
+        "ja_JP": "Server酱 Turbo 通知",
+        "id_ID": "Notifikasi ServerChan Turbo"
+      },
+      "short": "serverchanturbo-notification-plugin",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 Server酱 Turbo 发送 Komari 通知",
+        "zh_TW": "透過 Server醬 Turbo 傳送 Komari 通知",
+        "en": "Send Komari notifications through ServerChan Turbo",
+        "ja_JP": "Server酱 Turbo で Komari 通知を送信します",
+        "id_ID": "Kirim notifikasi Komari melalui ServerChan Turbo"
+      },
+      "version": "1.0.0",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-notification-plugins",
+      "download": "https://github.com/Akizon77/komari-notification-plugins/releases/download/v1.0.0/serverchanturbo-notification-plugin.zip",
+      "sha256": "edd852691de0dcf10ae09fbda7ae061690bf89e1159bea757f1e7d1bec3d048a"
+    },
+    {
+      "name": "Tailscale 管理",
+      "short": "tailscale-status",
+      "description": "Headscale / Tailscale 可视化组网管理台：支持节点监控与管控、用户与授权密钥管理、子网路由与出口节点、MagicDNS 与自定义解析、可视化 ACL 访问控制及 DERP 中继网络诊断。",
+      "version": "1.1.0",
+      "author": "smartcat999",
+      "komari": ">=1.6.1",
+      "url": "https://github.com/smartcat999/komari-tailscale",
+      "download": "https://github.com/smartcat999/komari-tailscale/releases/download/v1.1.0/tailscale-status.zip",
+      "sha256": "2023ac21b5330e1d2e08f052458cfbb92a34e089b2f764cfbcbcaad272262fa1",
+      "category": "network"
+    },
+    {
+      "name": {
+        "zh_CN": "Telegram 通知",
+        "zh_TW": "Telegram 通知",
+        "en": "Telegram Notification",
+        "ja_JP": "Telegram 通知",
+        "id_ID": "Notifikasi Telegram"
+      },
+      "short": "telegram-notification-plugin",
+      "category": "notification",
+      "description": {
+        "zh_CN": "通过 Telegram Bot 发送 Komari 通知",
+        "zh_TW": "透過 Telegram Bot 傳送 Komari 通知",
+        "en": "Send Komari notifications through a Telegram bot",
+        "ja_JP": "Telegram Bot で Komari 通知を送信します",
+        "id_ID": "Kirim notifikasi Komari melalui bot Telegram"
+      },
+      "version": "1.0.0",
+      "author": "Akizon77",
+      "komari": ">=1.6.0",
+      "url": "https://github.com/Akizon77/komari-notification-plugins",
+      "download": "https://github.com/Akizon77/komari-notification-plugins/releases/download/v1.0.0/telegram-notification-plugin.zip",
+      "sha256": "83945127387e25c6d4df2c36d4bfb9d9cfd49e0c8809bddd4f3fb30358d1bb0a"
+    },
+    {
+      "name": {
+        "zh-CN": "流量定期报告",
+        "zh-TW": "流量定期報告",
+        "en": "Scheduled Traffic Reports"
+      },
+      "short": "traffic-report",
+      "category": "monitoring",
+      "description": {
+        "zh-CN": "按自定义计划发送节点流量日报、周报和月报。",
+        "zh-TW": "依自訂排程發送節點流量日報、週報和月報。",
+        "en": "Send daily, weekly, and monthly traffic reports for selected nodes on custom schedules."
+      },
+      "version": "0.1.0",
+      "author": "Komari Monitor",
+      "komari": ">=1.4.3",
+      "url": "https://github.com/Akizon77/komari-traffic-report-plugin",
+      "download": "https://github.com/Akizon77/komari-traffic-report-plugin/releases/download/v0.1.0/traffic-report-0.1.0.zip",
+      "sha256": "8c8ff265cdfcb005f5e90e9aaa58c142b17f1cc919a498b297c1286f8aa1c4d7"
+    },
+    {
+      "name": {
+        "zh_CN": "流媒体与 AI 解锁检测",
+        "zh-CN": "流媒体与 AI 解锁检测",
+        "en": "Media & AI Unlock Test"
+      },
+      "short": "unlock-test",
+      "description": {
+        "zh_CN": "基于 MediaUnlockTest 探测各 VPS 节点的流媒体与 AI 平台解锁状态，并在 Komari 首页注入可拖动浮层展示各服务 Logo、红绿解锁边框与区域缩写。",
+        "zh-CN": "基于 MediaUnlockTest 探测各 VPS 节点的流媒体与 AI 平台解锁状态，并在 Komari 首页注入可拖动浮层展示各服务 Logo、红绿解锁边框与区域缩写。",
+        "en": "Probe VPS media and AI unlock status via MediaUnlockTest and inject a draggable floating overlay on the Komari homepage showing service logos, green/red borders, and region codes."
+      },
+      "version": "26.1024.1",
+      "author": {
+        "zh_CN": "livingfree2023 (livingfree2023@outlook.com)",
+        "zh-CN": "livingfree2023 (livingfree2023@outlook.com)",
+        "en": "livingfree2023 (livingfree2023@outlook.com)"
+      },
+      "komari": ">=1.0.5",
+      "url": "https://github.com/livingfree2023/Komari-Plugin-UnlockTest",
+      "download": "https://github.com/livingfree2023/Komari-Plugin-UnlockTest/releases/download/v26.1024.1/unlock-test.zip",
+      "sha256": "56b225062068118f33ac7ba711e8298b2ef7ef2227706b68678baa5bbcc54c24"
+    }
+  ]
+}
